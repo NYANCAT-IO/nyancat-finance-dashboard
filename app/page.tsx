@@ -274,7 +274,7 @@ export default function NyancatFinanceDashboard() {
             </Card>
             <Card className="pixel-border h-[180px]">
               <CardHeader>
-                <CardTitle>Feature Importance</CardTitle>
+                <CardTitle>Health Metrics</CardTitle>
               </CardHeader>
               <CardContent>
                 <ResponsiveContainer width="100%" height={100}>
