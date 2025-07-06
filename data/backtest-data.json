@@ -4149,9 +4149,9 @@
     "avgConfidence": 77.49999999999999
   },
   "featureImportance": {
-    "fundingMomentum": 0.0625,
+    "fundingMomentum": 0.45,
     "volatilityFilter": 0.0625,
-    "riskScore": 0.0625
+    "riskScore": 0.15
   },
   "monthlyStats": [],
   "symbolStats": {}
