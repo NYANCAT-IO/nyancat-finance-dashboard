@@ -182,8 +182,8 @@ export default function NyancatFinanceDashboard() {
         </section>
 
         {/* Charts and Config */}
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
+        <section className="space-y-8">
+          <div>
             <h2 className="text-2xl mb-4 text-white">Equity Curve</h2>
             <Card className="pixel-border h-[440px] p-4">
               <ResponsiveContainer width="100%" height="100%">
@@ -227,7 +227,7 @@ export default function NyancatFinanceDashboard() {
               </ResponsiveContainer>
             </Card>
           </div>
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Card className="pixel-border">
               <CardHeader>
                 <CardTitle>Configuration</CardTitle>
