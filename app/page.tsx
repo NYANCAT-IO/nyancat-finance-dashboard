@@ -93,7 +93,7 @@ export default function NyancatFinanceDashboard() {
   }
 
   const featureImportanceData = Object.entries(featureImportance).map(([name, value]) => ({
-    name,
+    name: name === 'fundingMomentum' ? 'Funding Momentum' : name === 'volatilityFilter' ? 'Volatility Filter' : name === 'riskScore' ? 'Risk Score' : name,
     value: value * 100,
   }))
 
@@ -185,7 +185,7 @@ export default function NyancatFinanceDashboard() {
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <h2 className="text-2xl mb-4 text-white">Equity Curve</h2>
-            <Card className="pixel-border h-[400px] p-4">
+            <Card className="pixel-border h-[440px] p-4">
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={equityChartData}>
                   <defs>
@@ -281,10 +281,10 @@ export default function NyancatFinanceDashboard() {
                   <BarChart
                     data={featureImportanceData}
                     layout="vertical"
-                    margin={{ top: 5, right: 20, left: 40, bottom: 5 }}
+                    margin={{ top: 5, right: 20, left: 70, bottom: 5 }}
                   >
                     <XAxis type="number" hide />
-                    <YAxis type="category" dataKey="name" width={100} tick={{ fill: "white", fontSize: 10 }} />
+                    <YAxis type="category" dataKey="name" width={130} tick={{ fill: "white", fontSize: 10 }} />
                     <Tooltip
                       cursor={{ fill: "rgba(255,255,255,0.1)" }}
                       contentStyle={{
