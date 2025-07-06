@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 212 100% 32%; /* #0052a4 */
+    --foreground: 0 0% 100%; /* #ffffff */
+
+    --card: 212 83% 43%; /* A slightly lighter blue for cards */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 212 100% 32%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 300 100% 80%; /* #ff99ff - Nyan Pink */
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 212 78% 51%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 212 78% 51%;
+    --muted-foreground: 0 0% 80%;
+
+    --accent: 212 78% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 212 83% 38%; /* A darker blue for borders */
+    --input: 212 83% 38%;
+    --ring: 300 100% 80%;
+
+    --radius: 0rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    image-rendering: pixelated;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-press-start-2p), monospace;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-white;
+  }
+}
+
+.pixel-border {
+  @apply border-2 border-border bg-card shadow-pixel;
+}
+
+@keyframes nyan-fly {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.animate-nyan-fly {
+  animation: nyan-fly 10s linear infinite;
+}
+
+@keyframes gentle-bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.app-button {
+  position: relative;
+  overflow: hidden;
+  animation: gentle-bounce 2s ease-in-out infinite;
+  background: #ff99cc;
+  border: 3px solid #666666;
+  color: #000000;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 153, 204, 0.4), 4px 4px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.app-button:hover {
+  animation: gentle-bounce 1s ease-in-out infinite;
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  border-color: #333333;
+  box-shadow: 0 0 15px rgba(255, 153, 204, 0.6), 4px 4px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.app-button:active {
+  transform: scale(0.95);
+  animation-duration: 0.5s;
+  filter: brightness(0.9);
+}
+
+.app-button-text {
+  position: relative;
+  z-index: 1;
+}
