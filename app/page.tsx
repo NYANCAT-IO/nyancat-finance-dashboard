@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import Image from "next/image"
 import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -8,7 +8,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import { ArrowUp, ArrowDown, ChevronsUpDown } from "lucide-react"
-import backtestData from "../data/backtest-data.json"
+import { fetchBacktestData } from "@/lib/data-fetcher"
+import backtestDataFallback from "../data/backtest-data.json"
 import type { Position } from "@/lib/types"
 
 // Helper to format numbers
@@ -37,10 +38,29 @@ const NyanCat = () => (
 )
 
 export default function NyancatFinanceDashboard() {
+  const [backtestData, setBacktestData] = useState(backtestDataFallback)
+  const [isLoading, setIsLoading] = useState(true)
   const [sortConfig, setSortConfig] = useState<{ key: keyof Position | null; direction: "asc" | "desc" }>({
     key: "totalPnL",
     direction: "desc",
   })
+
+  // Fetch data on component mount
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const data = await fetchBacktestData()
+        setBacktestData(data)
+      } catch (error) {
+        console.error('Failed to fetch backtest data, using fallback:', error)
+        setBacktestData(backtestDataFallback)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    loadData()
+  }, [])
 
   const sortedPositions = useMemo(() => {
     const sortableItems = [...backtestData.positions]
