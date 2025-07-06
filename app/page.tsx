@@ -113,17 +113,17 @@ export default function NyancatFinanceDashboard() {
             </DialogTrigger>
             <DialogContent className="pixel-border max-w-md bg-nyan-bg text-white">
               <DialogHeader>
-                <DialogTitle className="text-nyan-pink text-center text-xl">Download Our App</DialogTitle>
+                <DialogTitle className="text-nyan-pink text-center text-xl">Nyancat.finance</DialogTitle>
               </DialogHeader>
               <div className="flex flex-col items-center space-y-4 mt-4">
-                <div className="p-4 bg-white rounded-lg shadow-pixel">
-                  <Image src="/qr.png" alt="QR Code to download app" width={200} height={200} className="block" />
-                </div>
+                <a href="https://worldcoin.org/mini-app?app_id=app_77eeb2e53649726aa2eba216ae6967e3&draft_id=meta_e350958dfef2e040f0c64f823e2d5434" target="_blank" rel="noopener noreferrer" className="p-4 bg-white rounded-lg shadow-pixel cursor-pointer hover:opacity-80 transition-opacity">
+                  <Image src="/qr.png" alt="QR Code to visit Nyancat.finance via World App" width={200} height={200} className="block" />
+                </a>
                 <p className="text-center text-sm text-white/80">
                   Scan this QR code to visit Nyancat.finance via World App
                 </p>
                 <div className="text-center text-xs text-nyan-yellow">
-                  <p>Experience the future of DeFi trading</p>
+                  <p>You need the app installed first</p>
                 </div>
               </div>
             </DialogContent>
