@@ -1,0 +1,194 @@
+{
+  "summary": {
+    "initialCapital": 10000,
+    "finalCapital": 15000,
+    "totalReturn": 0.5,
+    "totalReturnDollars": 5000,
+    "numberOfTrades": 100,
+    "winningTrades": 60,
+    "winRate": 0.6,
+    "maxDrawdown": 0.1,
+    "totalDays": 365
+  },
+  "equityCurve": [
+    {
+      "timestamp": 1609459200000,
+      "value": 10000
+    },
+    {
+      "timestamp": 1612137600000,
+      "value": 11000
+    },
+    {
+      "timestamp": 1614556800000,
+      "value": 12000
+    },
+    {
+      "timestamp": 1617235200000,
+      "value": 13000
+    },
+    {
+      "timestamp": 1619827200000,
+      "value": 14000
+    },
+    {
+      "timestamp": 1622505600000,
+      "value": 15000
+    }
+  ],
+  "positions": [
+    {
+      "symbol": "BTCUSDT",
+      "entryTime": 1609459200000,
+      "exitTime": 1612137600000,
+      "entrySpotPrice": 30000,
+      "entryPerpPrice": 30100,
+      "exitSpotPrice": 35000,
+      "exitPerpPrice": 35100,
+      "quantity": 0.1,
+      "fundingPayments": [10, 12, 15],
+      "totalPnL": 500,
+      "entryFundingRate": 0.0001,
+      "entryFundingAPR": 0.0365,
+      "concurrentPositions": 2,
+      "exitFundingRate": 0.0001,
+      "exitFundingAPR": 0.0365,
+      "exitReason": "Take Profit",
+      "holdingPeriodHours": 720,
+      "fundingPeriodsHeld": 720,
+      "spotPnL": 490,
+      "perpPnL": 10,
+      "totalFunding": -37,
+      "entryFees": 5,
+      "exitFees": 5,
+      "entrySignals": {
+        "fundingMomentum": {
+          "symbol": "BTCUSDT",
+          "trend": "Up",
+          "strength": 0.8,
+          "lastRates": [0.0001, 0.00011, 0.00012],
+          "avgDecline": 0
+        },
+        "volatility": {
+          "symbol": "BTCUSDT",
+          "currentVol": 0.05,
+          "avgVol": 0.04,
+          "volPercentile": 0.75,
+          "isLowVol": false
+        },
+        "riskScore": 0.6,
+        "entryRecommendation": "Buy",
+        "exitRecommendation": "Hold"
+      },
+      "exitSignals": {
+        "fundingMomentum": {
+          "symbol": "BTCUSDT",
+          "trend": "Up",
+          "strength": 0.9,
+          "lastRates": [0.00012, 0.00013, 0.00014],
+          "avgDecline": 0
+        },
+        "volatility": {
+          "symbol": "BTCUSDT",
+          "currentVol": 0.06,
+          "avgVol": 0.04,
+          "volPercentile": 0.85,
+          "isLowVol": false
+        },
+        "riskScore": 0.7,
+        "entryRecommendation": "Hold",
+        "exitRecommendation": "Sell"
+      },
+      "predictedOutcome": "win",
+      "confidence": 0.85
+    },
+    {
+      "symbol": "ETHUSDT",
+      "entryTime": 1612137600000,
+      "exitTime": 1614556800000,
+      "entrySpotPrice": 1500,
+      "entryPerpPrice": 1510,
+      "exitSpotPrice": 1400,
+      "exitPerpPrice": 1410,
+      "quantity": 1,
+      "fundingPayments": [5, 6, 7],
+      "totalPnL": -100,
+      "entryFundingRate": 0.00005,
+      "entryFundingAPR": 0.01825,
+      "concurrentPositions": 1,
+      "exitFundingRate": 0.00005,
+      "exitFundingAPR": 0.01825,
+      "exitReason": "Stop Loss",
+      "holdingPeriodHours": 576,
+      "fundingPeriodsHeld": 576,
+      "spotPnL": -100,
+      "perpPnL": 0,
+      "totalFunding": -15,
+      "entryFees": 2,
+      "exitFees": 2,
+      "entrySignals": {
+        "fundingMomentum": {
+          "symbol": "ETHUSDT",
+          "trend": "Down",
+          "strength": 0.7,
+          "lastRates": [0.00006, 0.00005, 0.00004],
+          "avgDecline": 0
+        },
+        "volatility": {
+          "symbol": "ETHUSDT",
+          "currentVol": 0.07,
+          "avgVol": 0.06,
+          "volPercentile": 0.65,
+          "isLowVol": false
+        },
+        "riskScore": 0.4,
+        "entryRecommendation": "Sell",
+        "exitRecommendation": "Hold"
+      },
+      "exitSignals": {
+        "fundingMomentum": {
+          "symbol": "ETHUSDT",
+          "trend": "Down",
+          "strength": 0.6,
+          "lastRates": [0.00004, 0.00003, 0.00002],
+          "avgDecline": 0
+        },
+        "volatility": {
+          "symbol": "ETHUSDT",
+          "currentVol": 0.08,
+          "avgVol": 0.06,
+          "volPercentile": 0.75,
+          "isLowVol": false
+        },
+        "riskScore": 0.3,
+        "entryRecommendation": "Hold",
+        "exitRecommendation": "Buy"
+      },
+      "predictedOutcome": "loss",
+      "confidence": 0.7
+    }
+  ],
+  "config": {
+    "startDate": "2021-01-01",
+    "endDate": "2021-06-01",
+    "initialCapital": 10000,
+    "minAPR": 0.1,
+    "useML": true,
+    "riskThreshold": 0.05
+  },
+  "detailedPositions": [],
+  "optimizedPositions": [],
+  "signalAccuracy": {
+    "totalPredictions": 100,
+    "correctPredictions": 70,
+    "accuracy": 0.7,
+    "avgConfidence": 0.75
+  },
+  "featureImportance": {
+    "fundingMomentum": 0.4,
+    "volatilityFilter": 0.3,
+    "riskScore": 0.3
+  },
+  "monthlyStats": [],
+  "symbolStats": {}
+}
