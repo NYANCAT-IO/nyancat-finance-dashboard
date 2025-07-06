@@ -293,7 +293,7 @@ export default function NyancatFinanceDashboard() {
                         fontSize: "10px",
                       }}
                     />
-                    <Bar dataKey="value" fill="hsl(var(--primary))" background={{ fill: "rgba(255,255,255,0.1)" }} />
+                    <Bar dataKey="value" fill="#ff99ff" stroke="#ff99ff" strokeWidth={1} />
                   </BarChart>
                 </ResponsiveContainer>
               </CardContent>
