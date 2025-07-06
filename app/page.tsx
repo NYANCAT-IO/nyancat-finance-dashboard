@@ -277,14 +277,14 @@ export default function NyancatFinanceDashboard() {
                 <CardTitle>Health Metrics</CardTitle>
               </CardHeader>
               <CardContent>
-                <ResponsiveContainer width="100%" height={100}>
+                <ResponsiveContainer width="100%" height={120}>
                   <BarChart
                     data={featureImportanceData}
                     layout="vertical"
-                    margin={{ top: 5, right: 20, left: 70, bottom: 5 }}
+                    margin={{ top: 5, right: 40, left: 60, bottom: 5 }}
                   >
                     <XAxis type="number" hide />
-                    <YAxis type="category" dataKey="name" width={130} tick={{ fill: "white", fontSize: 10 }} />
+                    <YAxis type="category" dataKey="name" width={90} tick={{ fill: "white", fontSize: 10 }} />
                     <Tooltip
                       cursor={{ fill: "rgba(255,255,255,0.1)" }}
                       contentStyle={{
