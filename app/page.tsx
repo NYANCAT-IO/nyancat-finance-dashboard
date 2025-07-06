@@ -228,7 +228,7 @@ export default function NyancatFinanceDashboard() {
             </Card>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Card className="pixel-border">
+            <Card className="pixel-border h-[180px]">
               <CardHeader>
                 <CardTitle>Configuration</CardTitle>
               </CardHeader>
@@ -254,7 +254,7 @@ export default function NyancatFinanceDashboard() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="pixel-border">
+            <Card className="pixel-border h-[180px]">
               <CardHeader>
                 <CardTitle>Signal Accuracy</CardTitle>
               </CardHeader>
