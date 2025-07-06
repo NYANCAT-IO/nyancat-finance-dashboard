@@ -283,7 +283,7 @@ export default function NyancatFinanceDashboard() {
                     layout="vertical"
                     margin={{ top: 5, right: 40, left: 60, bottom: 5 }}
                   >
-                    <XAxis type="number" hide />
+                    <XAxis type="number" domain={[0, 50]} stroke="white" tick={{ fill: "white", fontSize: 8 }} />
                     <YAxis type="category" dataKey="name" width={90} tick={{ fill: "white", fontSize: 10 }} />
                     <Tooltip
                       cursor={{ fill: "rgba(255,255,255,0.1)" }}
